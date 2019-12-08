@@ -165,6 +165,8 @@ return [
         /*
          * Package Service Providers...
          */
+        //this for permissions and roles
+        Spatie\Permission\PermissionServiceProvider::class,
 
         /*
          * Application Service Providers...
