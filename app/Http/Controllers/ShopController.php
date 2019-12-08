@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Shop;
+
 use Illuminate\Http\Request;
+
+use App\Models\Shop;
 
 class ShopController extends Controller
 {
@@ -15,6 +17,8 @@ class ShopController extends Controller
     public function index()
     {
         //
+        $shop = Shop::find(1);
+        return $shop->owner->name;
     }
 
     /**

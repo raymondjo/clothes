@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateShopsTable extends Migration
+class CreateProductOfferTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,12 @@ class CreateShopsTable extends Migration
      */
     public function up()
     {
-        Schema::create('shops', function (Blueprint $table) {
+        Schema::create('product_offer', function (Blueprint $table) {
             $table->bigIncrements('id');
-
-            //owner id for relation with user as owner for the shop
-            $table->unsignedBigInteger('owner_id');
-
             
-            
+            $table->unsignedBigInteger('product_id');
+            $table->unsignedBigInteger('offer_id');
+
             $table->timestamps();
         });
     }
@@ -32,6 +30,6 @@ class CreateShopsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('shops');
+        Schema::dropIfExists('product_offer');
     }
 }
