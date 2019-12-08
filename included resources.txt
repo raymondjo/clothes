@@ -1,0 +1,4 @@
+// permissions roles laravel package
+https://github.com/spatie/laravel-permission
+// doc of permission and role package
+https://docs.spatie.be/laravel-permission/v3/basic-usage/basic-usage/
